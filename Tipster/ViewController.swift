@@ -138,7 +138,7 @@ class ViewController: UIViewController {
         if total.text == "0"{
             total.text = "0."
         }
-        if (total.text?.characters.contains("."))!{
+        if (total.text?.contains("."))!{
             total.text = total.text
         }
         else{
@@ -168,7 +168,7 @@ class ViewController: UIViewController {
         crunchNumbers()
     }
     
-    func crunchNumbers() {
+    @objc func crunchNumbers() {
         if let inputString = total.text {
             let input = Double(inputString)
             let tip = Double(round(tipSlider.value))
